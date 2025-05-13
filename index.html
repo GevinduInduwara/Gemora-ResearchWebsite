@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Gemora</title>
+</head>
+
+<body style="background-color: #E9F7EF">
+    <!-- Navigation -->
+    <nav id="navmenu" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="./Images/logo/icon.png" width="32" height="32" class="d-inline-block align-top" alt="Gemora Logo" loading="lazy">
+                <span>Gemora</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" 
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Project Scope</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="projectDropdown">
+                            <a class="dropdown-item" href="#project-scope">
+                                <i class="fas fa-book"></i> Literature Survey
+                            </a>
+                            <a class="dropdown-item" href="#research_gap">
+                                <i class="fas fa-search-minus"></i> Research Gap
+                            </a>
+                            <a class="dropdown-item" href="#research_problem">
+                                <i class="fas fa-question-circle"></i> Research Problem & Solution
+                            </a>
+                            <a class="dropdown-item" href="#research_objectives">
+                                <i class="fas fa-bullseye"></i> Research Objectives
+                            </a>
+                            <a class="dropdown-item" href="#methodology">
+                                <i class="fas fa-sitemap"></i> Methodology
+                            </a>
+                            <a class="dropdown-item" href="#tech_used">
+                                <i class="fas fa-microchip"></i> Technologies
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#milestones">
+                            <i class="fas fa-tasks"></i>
+                            <span>Milestones</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="downloadsDropdown" role="button" 
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-download"></i>
+                            <span>Downloads</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="downloadsDropdown">
+                            <a class="dropdown-item" href="#documents">
+                                <i class="far fa-file-alt"></i> Documents
+                            </a>
+                            <a class="dropdown-item" href="#presentations">
+                                <i class="fas fa-desktop"></i> Presentations
+                            </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        <i class="fas fa-users"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <!-- Background Layers -->
+        <div class="hero-bg">
+            <div class="bg-layer bg-layer-1"></div>
+            <div class="bg-layer bg-layer-2"></div>
+        </div>
+        <!-- Magnifying Glass -->
+        <div class="magnifying-glass" id="magnifyingGlass">
+            <i class="fas fa-search"></i>
+            <div class="magnifier"></div>
+        </div>
+        <!-- Content -->
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title animate__animated animate__fadeInUp">Welcome to <span class="highlight">Gemora</span></h1>
+                    <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Transforming ideas into reality through innovative research</p>
+                    <a href="#about" class="btn btn-primary btn-lg mt-3 animate__animated animate__fadeInUp animate__delay-2s">
+                        Explore Our Work <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <p class="mt-3 text-white-50"><small><i class="fas fa-lightbulb mr-2"></i>Move the magnifying glass to reveal hidden details</small></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- About Us -->
+    <section id="about" class="main-sections">
+        <div class="container">
+            <h5 class="section-headings">About Us</h5>
+            <div class="sub-section">
+                <h2>Our Team</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img src="./Images/other/team1.jpg" alt="Team Member 1" class="img-fluid rounded-circle">
+                            <h4>John Doe</h4>
+                            <p>Team Leader</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img src="./Images/other/team2.jpg" alt="Team Member 2" class="img-fluid rounded-circle">
+                            <h4>Jane Smith</h4>
+                            <p>Developer</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img src="./Images/other/team3.jpg" alt="Team Member 3" class="img-fluid rounded-circle">
+                            <h4>Mike Johnson</h4>
+                            <p>Designer</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team-member">
+                            <img src="./Images/other/team4.jpg" alt="Team Member 4" class="img-fluid rounded-circle">
+                            <h4>Sarah Wilson</h4>
+                            <p>Researcher</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technologies Section -->
+                <div class="sub-section mt-5">
+                    <h2>Technologies We Use</h2>
+                    <div class="technologies-container">
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-brain"></i>
+                            <span>TensorFlow</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-robot"></i>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Keras</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-tags"></i>
+                            <span>COCO Annotator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Documents Section -->
+    <section id="documents" class="main-sections bg-light">
+        <div class="container">
+            <h5 class="section-headings">Resources</h5>
+            <div class="sub-section">
+                <h2>Documents</h2>
+                <p class="section-description">Access our research papers, reports, and documentation.</p>
+                
+                <div class="row">
+                    <!-- Document Card 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <h3>Research Paper</h3>
+                            <p>Detailed analysis of our findings and methodology in PDF format.</p>
+                            <div class="document-meta">
+                                <span><i class="far fa-file-pdf"></i> PDF</span>
+                                <span><i class="far fa-file"></i> 2.4 MB</span>
+                            </div>
+                            <a href="#" class="btn-download" download>
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Document Card 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <h3>Project Report</h3>
+                            <p>Comprehensive project documentation and technical specifications.</p>
+                            <div class="document-meta">
+                                <span><i class="far fa-file-word"></i> DOCX</span>
+                                <span><i class="far fa-file"></i> 1.8 MB</span>
+                            </div>
+                            <a href="#" class="btn-download" download>
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Document Card 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <h3>Data Analysis</h3>
+                            <p>Raw data and analysis from our research experiments.</p>
+                            <div class="document-meta">
+                                <span><i class="far fa-file-excel"></i> XLSX</span>
+                                <span><i class="far fa-file"></i> 3.2 MB</span>
+                            </div>
+                            <a href="#" class="btn-download" download>
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentations Section -->
+    <section id="presentations" class="main-sections">
+        <div class="container">
+            <h5 class="section-headings">Resources</h5>
+            <div class="sub-section">
+                <h2>Presentations</h2>
+                <p class="section-description">Explore our slide decks and presentation materials.</p>
+                
+                <div class="row">
+                    <!-- Presentation Card 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="presentation-card">
+                            <div class="presentation-thumbnail">
+                                <img src="./Images/other/presentation1.jpg" alt="Project Overview" class="img-fluid">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="presentation-content">
+                                <h3>Project Overview</h3>
+                                <p>Introduction to our research and key findings.</p>
+                                <div class="presentation-meta">
+                                    <span><i class="far fa-calendar-alt"></i> May 10, 2025</span>
+                                    <span><i class="far fa-file-powerpoint"></i> PPTX</span>
+                                </div>
+                                <a href="#" class="btn-view" data-toggle="modal" data-target="#presentationModal1">
+                                    <i class="fas fa-eye"></i> View Slides
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Presentation Card 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="presentation-card">
+                            <div class="presentation-thumbnail">
+                                <img src="./Images/other/presentation2.jpg" alt="Technical Deep Dive" class="img-fluid">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="presentation-content">
+                                <h3>Technical Deep Dive</h3>
+                                <p>Detailed technical implementation and architecture.</p>
+                                <div class="presentation-meta">
+                                    <span><i class="far fa-calendar-alt"></i> May 17, 2025</span>
+                                    <span><i class="far fa-file-pdf"></i> PDF</span>
+                                </div>
+                                <a href="#" class="btn-view" data-toggle="modal" data-target="#presentationModal2">
+                                    <i class="fas fa-eye"></i> View Slides
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Presentation Card 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="presentation-card">
+                            <div class="presentation-thumbnail">
+                                <img src="./Images/other/presentation3.jpg" alt="Final Presentation" class="img-fluid">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="presentation-content">
+                                <h3>Final Presentation</h3>
+                                <p>Comprehensive review of project outcomes and future work.</p>
+                                <div class="presentation-meta">
+                                    <span><i class="far fa-calendar-alt"></i> May 24, 2025</span>
+                                    <span><i class="far fa-file-video"></i> Video</span>
+                                </div>
+                                <a href="#" class="btn-view" data-toggle="modal" data-target="#presentationModal3">
+                                    <i class="fas fa-play-circle"></i> Watch Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Modals -->
+    <div class="modal fade" id="presentationModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Project Overview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="#" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="presentationModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Technical Deep Dive</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="#" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="presentationModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Final Presentation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="#" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <section id="contact" class="main-sections">
+        <div class="container">
+            <h5 class="section-headings">Contact Us</h5>
+            <div class="sub-section">
+                <h2>Get in Touch</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>123 Research Street, Colombo, Sri Lanka</p>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <p>+94 123 456 789</p>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>contact@gemora.com</p>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="./Images/logo/icon.png" alt="Gemora Logo">
+                        <h3>Gemora</h3>
+                    </div>
+                    <p>Advanced AI solutions for coconut plantation management and disease detection.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> contact@gemora.com</p>
+                        <p><i class="fas fa-phone"></i> +94 123 456 789</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#project-scope">Project Scope</a></li>
+                        <li><a href="#milestones">Milestones</a></li>
+                        <li><a href="#downloads">Downloads</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Pest Detection</a></li>
+                        <li><a href="#">Disease Analysis</a></li>
+                        <li><a href="#">Crop Monitoring</a></li>
+                        <li><a href="#">AI Solutions</a></li>
+                        <li><a href="#">Research</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for updates and insights</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gemora. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
