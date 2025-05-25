@@ -129,59 +129,170 @@
             </div>
         </div>
     </header>
-    
-    <!-- About Us -->
+        <!-- Literature Survey Section -->
+        <section id="literature-survey" class="main-sections bg-light">
+            <div class="container">
+                <h5 class="section-headings">Literature Survey</h5>
+                <div class="sub-section">
+                    <h2>Review of Related Work</h2>
+                    <p class="section-description">
+                        This section provides an overview of the key research papers, articles, and previous work relevant to our project. Summaries and critical analyses of the most influential studies are presented to highlight the current state-of-the-art, identify research gaps, and justify our research direction.
+                    </p>
+                    <!-- Add your literature survey content here -->
+                </div>
+            </div>
+        </section>
+        <!-- Research Gap Section -->
+        <section id="research-gap" class="main-sections">
+            <div class="container">
+                <h5 class="section-headings">Research Gap</h5>
+                <div class="research-gap">
+                    <h2>Identifying the Research Gap</h2>
+                    <p class="section-description">
+                        This section highlights the gaps and limitations found in the existing literature, emphasizing the need for further investigation. Our project aims to address these gaps and contribute new knowledge to the field.
+                    </p>
+                    <!-- Add your research gap analysis here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Problem and Solution Section -->
+        <section id="research-problem" class="main-sections bg-light">
+            <div class="container">
+                <h5 class="section-headings">Research Problem & Solution</h5>
+                <div class="sub-section">
+                    <h2>Research Problem</h2>
+                    <p class="section-description">
+                        Clearly state the main research problem or question that your project addresses. Explain why this problem is important and relevant to the field.
+                    </p>
+                </div>
+                <div class="sub-section">
+                    <h2>Proposed Solution</h2>
+                    <p class="section-description">
+                        Briefly describe your proposed solution, methodology, or approach to address the research problem. Highlight what makes your solution unique or innovative.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Objectives Section -->
+        <section id="research-objectives" class="main-sections">
+            <div class="container">
+                <h5 class="section-headings">Research Objectives</h5>
+                <div class="sub-section">
+                    <h2>Objectives of the Study</h2>
+                    <p class="section-description">
+                        The main objectives of this research are as follows:
+                    </p>
+                    <ul>
+                        <li>Objective 1: [State the first research objective]</li>
+                        <li>Objective 2: [State the second research objective]</li>
+                        <li>Objective 3: [State the third research objective]</li>
+                        <!-- Add more objectives as needed -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology" class="main-sections bg-light">
+            <div class="container">
+                <h5 class="section-headings">Methodology</h5>
+                <div class="sub-section">
+                    <h2>Research Methodology</h2>
+                    <p class="section-description">
+                        This section outlines the methods and procedures used to conduct the research. Describe your approach, data collection, analysis techniques, and any tools or frameworks applied.
+                    </p>
+                    <ol>
+                        <li>Step 1: [Describe the first step of your methodology]</li>
+                        <li>Step 2: [Describe the second step of your methodology]</li>
+                        <li>Step 3: [Describe the third step of your methodology]</li>
+                        <!-- Add more steps as needed -->
+                    </ol>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us -->
     <section id="about" class="main-sections">
         <div class="container">
             <h5 class="section-headings">About Us</h5>
             <div class="sub-section">
+                <h2>Supervisors</h2>
+                <div class="row mb-4" id="supervisors-cards"></div>
                 <h2>Our Team</h2>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="team-member">
-                            <img src="./Images/Team 1.jpg" alt="Team Member 1" class="img-fluid">
-                            <h4>Malwaththa M.A.G.I</h4>
-                            <p>Developer</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
+                <div class="row" id="team-cards"></div>
+                <script>
+                  // Data for supervisors and team members
+                  const supervisors = [
+                    {
+                      name: "Ms. Thamali Dasanayaka",
+                      role: "Supervisor",
+                      img: "./Images/scan_image_1510200789-Ms__Thamali.jpg",
+                      details: ["Senior Lecturer, SLIIT", "Faculty of Computing | Information Technology", "Sri Lanka Institute of Information Technology"],
+                      linkedin: "#",
+                      github: "#"
+                    },
+                    {
+                      name: "Dr. Sanvitha Kasthuriarachchi",
+                      role: "Co-Supervisor",
+                      img: "./Images/PHOTO-2025-05-25-22-50-08.jpg",
+                      details: ["Assistant Professor, SLIIT", "Faculty of Computing | Information Technology", "Sri Lanka Institute of Information Technology"],
+                      linkedin: "#",
+                      github: "#"
+                    }
+                  ];
+                  const team = [
+                    {
+                      name: "Malwaththa M.A.G.I",
+                      role: "Developer",
+                      img: "./Images/Team 1.jpg",
+                      linkedin: "#",
+                      github: "#"
+                    },
+                    {
+                      name: "Dewasurendra D.B.V",
+                      role: "Developer",
+                      img: "./Images/RTR_1946.jpg",
+                      linkedin: "#",
+                      github: "#"
+                    },
+                    {
+                      name: "Abeyrathna M.A",
+                      role: "Developer",
+                      img: "./Images/Team 3.jpg",
+                      linkedin: "#",
+                      github: "#"
+                    },
+                    {
+                      name: "Perera K.A.W.D",
+                      role: "Developer",
+                      img: "./Images/Team 4.jpg",
+                      linkedin: "#",
+                      github: "#"
+                    }
+                  ];
+                  function createCard(person, isSupervisor = false) {
+                    return `
+                      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100 shadow-sm ${isSupervisor ? 'border-primary' : ''}">
+                          <img src="${person.img}" class="card-img-top mx-auto mt-3" alt="${person.name}" style="width:160px;height:160px;object-fit:cover;border-radius:12px;border:3px solid #fff;box-shadow:0 2px 12px rgba(30,60,114,0.11);background:#e9f7ef;">
+                          <div class="card-body text-center">
+                            <h5 class="card-title mb-1">${person.name}</h5>
+                            <p class="card-subtitle mb-2 text-muted">${person.role}</p>
+                            ${person.details ? person.details.map(d => `<div class='small text-secondary'>${d}</div>`).join('') : ''}
+                            <div class="mt-2">
+                              ${person.linkedin ? `<a href="${person.linkedin}" class="btn btn-sm btn-outline-primary mx-1" target="_blank"><i class="fab fa-linkedin"></i></a>` : ''}
+                              ${person.github ? `<a href="${person.github}" class="btn btn-sm btn-outline-dark mx-1" target="_blank"><i class="fab fa-github"></i></a>` : ''}
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="team-member">
-                            <img src="./Images/RTR_1946.jpg" alt="Team Member 2" class="img-fluid">
-                            <h4>Dewasurendra D.B.V</h4>
-                            <p>Developer</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="team-member">
-                            <img src="./Images/Team 3.jpg" alt="Team Member 3" class="img-fluid">
-                            <h4>Abeyrathna M.A</h4>
-                            <p>Developer</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="team-member">
-                            <img src="./Images/Team 4.jpg" alt="Team Member 4" class="img-fluid">
-                            <h4>Perera K.A.W.D</h4>
-                            <p>Developer</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                      </div>
+                    `;
+                  }
+                  document.getElementById('supervisors-cards').innerHTML = supervisors.map(s => createCard(s, true)).join('');
+                  document.getElementById('team-cards').innerHTML = team.map(m => createCard(m)).join('');
+                </script>
                 
                 <!-- Technologies Section -->
                 <div class="sub-section mt-5">
@@ -223,11 +334,16 @@
                             <i class="fa-brands fa-react"></i>
                             <span>React</span>
                         </div>
+                        <div class="tech-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" alt="OpenCV Logo" style="height: 24px; vertical-align: middle;">
+                            <span>OpenCV</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Documents Section -->
     <section id="documents" class="main-sections bg-light">
         <div class="container">

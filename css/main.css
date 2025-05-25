@@ -1462,8 +1462,18 @@ h2::after {
 }
 
 .section-figure img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
     border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(30,60,114,0.10);
+    transition: box-shadow 0.25s, transform 0.18s, border-radius 0.18s;
+}
+
+.section-figure img:hover {
+    box-shadow: 0 8px 32px rgba(30,60,114,0.16);
+    transform: scale(1.03) translateY(-3px);
+    border-radius: 16px;
 }
 
 /* Research Gap Styles */
