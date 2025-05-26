@@ -143,6 +143,15 @@ if (contactForm) {
 
 // Add your main JS here
 
+document.querySelectorAll('a.doc-btn[href^="http"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    // Always open in new tab for external doc links
+    window.open(this.href, '_blank');
+    e.preventDefault();
+  });
+});
+
+
 // Reveal Research Gap section on scroll
 function revealOnScroll() {
   const researchGap = document.querySelector('#research-gap .research-gap');
@@ -151,6 +160,13 @@ function revealOnScroll() {
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
   if (rect.top <= windowHeight - 80) {
     researchGap.classList.add('reveal');
+    // Stagger reveal for each .section-description
+    const descriptions = researchGap.querySelectorAll('.section-description');
+    descriptions.forEach((desc, i) => {
+      setTimeout(() => {
+        desc.classList.add('visible');
+      }, 200 + i * 200);
+    });
     window.removeEventListener('scroll', revealOnScroll);
   }
 }
