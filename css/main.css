@@ -1307,7 +1307,7 @@ html {
 .doc-modern-card:nth-child(4) .doc-btn { background: #43e97b; } /* Status Document II - pastel teal */
 .doc-modern-card:nth-child(5) .doc-btn { background: #ffb347; } /* Research Paper - pastel orange */
 .doc-modern-card:nth-child(6) .doc-btn { background: #ff6f69; } /* Final Report - pastel red */
-.doc-modern-card:nth-child(7) .doc-btn { background: #f78ca2; } /* Project Poster - pastel pink */
+
 
 .doc-modern-card:nth-child(1) .doc-btn:hover, .doc-modern-card:nth-child(1) .doc-btn:focus { background: #a678c9; }
 .doc-modern-card:nth-child(2) .doc-btn:hover, .doc-modern-card:nth-child(2) .doc-btn:focus { background: #6e8ecf; }
