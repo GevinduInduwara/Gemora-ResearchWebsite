@@ -220,14 +220,14 @@ if (heroSection && bgLayer1 && bgLayer2 && magnifyingGlass) {
     heroSection.addEventListener('click', (e) => {
         isMagnifying = !isMagnifying;
         magnifyingGlass.classList.toggle('active', isMagnifying);
-        
-        // Toggle cursor style
-        if (isMagnifying) {
-            document.body.style.cursor = 'none';
-        } else {
-            document.body.style.cursor = 'default';
-        }
     });
+    
+    // Toggle cursor style
+    if (isMagnifying) {
+        document.body.style.cursor = 'none';
+    } else {
+        document.body.style.cursor = 'default';
+    }
     
     // Move magnifying glass with mouse
     heroSection.addEventListener('mousemove', (e) => {
@@ -261,6 +261,128 @@ if (heroSection && bgLayer1 && bgLayer2 && magnifyingGlass) {
     // Hide default cursor when over the hero section
     heroSection.style.cursor = 'none';
 }
+
+// Modern Contact Us JS: floating labels and form feedback
+(function() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  // Floating label support for all inputs/textareas
+  form.querySelectorAll('input, textarea').forEach(el => {
+    el.addEventListener('blur', function() {
+      if (this.value) {
+        this.classList.add('has-value');
+      } else {
+        this.classList.remove('has-value');
+      }
+    });
+    // On page load, mark already filled
+    if (el.value) el.classList.add('has-value');
+  });
+
+  // Simple form validation and feedback
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+    form.querySelectorAll('input, textarea').forEach(el => {
+      if (!el.value.trim()) {
+        el.style.borderColor = '#ff6f69';
+        valid = false;
+      } else {
+        el.style.borderColor = '';
+      }
+    });
+    if (valid) {
+      // Show success message
+      document.getElementById('contact-success').style.display = 'block';
+      form.reset();
+      setTimeout(() => {
+        document.getElementById('contact-success').style.display = 'none';
+      }, 3500);
+    }
+  });
+})();
+
+// Modern Presentations Modal JS
+(function() {
+  function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  // Open modal on button click
+  document.querySelectorAll('[data-modal]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const modalId = this.getAttribute('data-modal');
+      openModal(modalId);
+    });
+  });
+  // Close modal on close button or background click
+  document.querySelectorAll('.presentation-modern-modal').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal(modal.id);
+    });
+    const closeBtn = modal.querySelector('.presentation-modern-modal-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        closeModal(closeBtn.getAttribute('data-modal'));
+      });
+    }
+  });
+  // Close modal on ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.presentation-modern-modal').forEach(modal => {
+        if (modal.style.display !== 'none') closeModal(modal.id);
+      });
+    }
+  });
+})();
+
+        
+        // Toggle cursor style
+        if (isMagnifying) {
+            document.body.style.cursor = 'none';
+        } else {
+            document.body.style.cursor = 'default';
+        }
+
+    
+    // Move magnifying glass with mouse
+    heroSection.addEventListener('mousemove', (e) => {
+        const { left, top, width, height } = heroSection.getBoundingClientRect();
+        const x = e.clientX - left;
+        const y = e.clientY - top;
+        
+        // Update magnifying glass position
+        magnifyingGlass.style.left = `${x}px`;
+        magnifyingGlass.style.top = `${y}px`;
+        
+        // Update background position for parallax effect
+        if (!isMagnifying) {
+            const moveX1 = (x - width / 2) * 0.01;
+            const moveY1 = (y - height / 2) * 0.01;
+            bgLayer1.style.transform = `translate(${moveX1}px, ${moveY1}px) scale(1.05)`;
+        } else {
+            // When magnifying, update the clip-path position
+            document.documentElement.style.setProperty('--mouse-x', `${x}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+        }
+    });
+    
+    // Reset position when mouse leaves
+    heroSection.addEventListener('mouseleave', () => {
+        if (!isMagnifying) {
+            bgLayer1.style.transform = 'translate(0, 0) scale(1.05)';
+        }
+    });
+    
+    // Hide default cursor when over the hero section
+    heroSection.style.cursor = 'none';
 
 // Add scroll progress indicator
 const progressIndicator = document.createElement('div');

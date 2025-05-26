@@ -1,0 +1,109 @@
+/* Modern Contact Us Section Styles */
+.contact-modern-container {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 40px rgba(30,60,114,0.13), 0 2px 8px rgba(30,60,114,0.09);
+  padding: 2.5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+.contact-modern-form {
+  flex: 1 1 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.contact-modern-form .form-group {
+  position: relative;
+  margin-bottom: 0;
+}
+.contact-modern-form input,
+.contact-modern-form textarea {
+  width: 100%;
+  padding: 1.1rem 1rem 0.5rem 1rem;
+  border: 1.5px solid #e3e6f0;
+  border-radius: 0.8rem;
+  background: #f8fafc;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  resize: none;
+}
+.contact-modern-form input:focus,
+.contact-modern-form textarea:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 2px 12px rgba(74,144,226,0.08);
+}
+.contact-modern-form label {
+  position: absolute;
+  left: 1.2rem;
+  top: 1.1rem;
+  color: #64748b;
+  font-size: 1rem;
+  pointer-events: none;
+  background: transparent;
+  transition: 0.2s cubic-bezier(.4,2,.6,1);
+}
+.contact-modern-form input:focus + label,
+.contact-modern-form input:not(:placeholder-shown) + label,
+.contact-modern-form textarea:focus + label,
+.contact-modern-form textarea:not(:placeholder-shown) + label {
+  top: -0.8rem;
+  left: 0.9rem;
+  background: #fff;
+  padding: 0 0.3rem;
+  font-size: 0.89rem;
+  color: #4a90e2;
+}
+.contact-modern-form button {
+  background: linear-gradient(120deg,#1e3c72 0%,#4a90e2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 0.9rem 0;
+  font-size: 1.13rem;
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(74,144,226,0.08);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+.contact-modern-form button:hover {
+  background: linear-gradient(120deg,#4a90e2 0%,#1e3c72 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+.contact-modern-info {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  justify-content: center;
+  background: linear-gradient(120deg,#f8fafc 0%,#e3e6f0 100%);
+  border-radius: 1.3rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(30,60,114,0.07);
+}
+.contact-modern-info .info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.contact-modern-info .info-item i {
+  font-size: 1.5rem;
+  color: #4a90e2;
+  margin-top: 0.2rem;
+}
+.contact-modern-info .info-item p {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .contact-modern-container { flex-direction: column; gap: 2rem; padding: 2rem 1rem; }
+  .contact-modern-info { padding: 1.5rem 1rem; }
+}

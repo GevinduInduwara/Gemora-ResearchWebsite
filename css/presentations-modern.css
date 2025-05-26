@@ -1,0 +1,369 @@
+/* Modern, Clean Presentations Cards Section */
+.presentations-modern-section {
+  background: #eaf6f2;
+  padding: 90px 0 60px 0;
+}
+.presentations-modern-header {
+  text-align: center;
+}
+.presentations-modern-badge {
+  display: inline-block;
+  background: #6c63ff;
+  color: #fff;
+  padding: 0.3em 1.3em;
+  border-radius: 1.3em;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1.1em;
+  letter-spacing: 1px;
+}
+.presentations-modern-title {
+  color: #4f46e5;
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 0.7rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 12px #c7d2fe33;
+  position: relative;
+  display: inline-block;
+}
+.presentations-modern-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 18px auto 0 auto;
+  background: linear-gradient(90deg, #2563eb 0%, #43e97b 100%);
+  border-radius: 2px;
+}
+.presentations-modern-description {
+  color: #6b7280;
+  text-align: center;
+  font-size: 1.09rem;
+  margin-bottom: 2.7rem;
+  font-weight: 500;
+}
+.presentations-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2.1rem;
+  justify-items: center;
+  margin-top: 1.5rem;
+}
+.presentation-modern-card {
+  background: #fff;
+  border-radius: 1.3rem;
+  box-shadow: 0 8px 32px 0 rgba(44,62,80,0.13), 0 1.5px 8px rgba(44,62,80,0.09);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 330px;
+  min-width: 240px;
+  overflow: hidden;
+  transition: transform 0.17s, box-shadow 0.17s;
+}
+.presentation-modern-card:hover {
+  transform: translateY(-7px) scale(1.025);
+  box-shadow: 0 16px 48px rgba(44,62,80,0.17), 0 3px 12px rgba(44,62,80,0.12);
+}
+.presentation-modern-card-top {
+  background: linear-gradient(120deg,#2563eb 0%,#43e97b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+.gradient-bluegreen {
+  background: linear-gradient(120deg,#2563eb 0%,#43e97b 100%);
+}
+.presentation-modern-card-top i {
+  color: #fff;
+  font-size: 2.6rem;
+  filter: drop-shadow(0 2px 8px #2563eb55);
+}
+.presentation-modern-card-bottom {
+  padding: 1.6rem 1.2rem 1.3rem 1.2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.presentation-modern-card-bottom h3 {
+  font-size: 1.17rem;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  color: #22223b;
+  letter-spacing: 0.5px;
+}
+.presentation-modern-meta {
+  font-size: 0.99rem;
+  color: #6b7280;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.presentation-modern-meta i {
+  font-size: 1.13rem;
+  margin-right: 0.3em;
+}
+.presentation-modern-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.75rem 1.3rem;
+  font-weight: 700;
+  font-size: 1.03rem;
+  margin-top: auto;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.12);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.14s;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+.presentation-modern-btn i {
+  margin-left: 0.5em;
+  font-size: 0.97em;
+}
+.presentation-modern-btn:hover {
+  background: #43e97b;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+@media (max-width: 900px) {
+  .presentations-modern-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .presentations-modern-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .presentation-modern-card {
+    max-width: 99vw;
+    min-width: 0;
+  }
+}
+.presentations-modern-title {
+  color: #1e3c72;
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 12px #c7d2fe33;
+  position: relative;
+  display: inline-block;
+}
+.presentations-modern-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 18px auto 0 auto;
+  background: linear-gradient(90deg, #2563eb 0%, #43e97b 100%);
+  border-radius: 2px;
+  animation: slideIn 1.2s cubic-bezier(.4,2,.6,1);
+}
+@keyframes slideIn {
+  0% { width: 0; opacity: 0; }
+  100% { width: 70px; opacity: 1; }
+}
+.presentations-modern-description {
+  color: #64748b;
+  text-align: center;
+  font-size: 1.19rem;
+  margin-bottom: 2.9rem;
+  font-weight: 500;
+}
+.presentations-modern-grid {
+  display: flex;
+  gap: 2.7rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.presentation-modern-card {
+  background: rgba(255,255,255,0.55);
+  border-radius: 2.2rem;
+  box-shadow: 0 16px 48px 0 rgba(30,60,114,0.13), 0 1.5px 15px rgba(44,62,80,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 355px;
+  padding: 0 0 2.3rem 0;
+  margin-bottom: 0.8rem;
+  transition: transform 0.23s cubic-bezier(.4,2,.6,1), box-shadow 0.23s cubic-bezier(.4,2,.6,1);
+  position: relative;
+  overflow: hidden;
+  border: 1.7px solid #e0e7ff;
+  backdrop-filter: blur(12px) saturate(1.3);
+}
+.presentation-modern-card:hover {
+  transform: translateY(-10px) scale(1.035);
+  box-shadow: 0 18px 48px 0 rgba(30,60,114,0.16), 0 3px 12px rgba(44,62,80,0.13);
+  z-index: 3;
+}
+.presentation-modern-thumb {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-top-left-radius: 2.2rem;
+  border-top-right-radius: 2.2rem;
+  position: relative;
+  filter: brightness(0.98) saturate(1.13);
+  box-shadow: 0 8px 24px #a5b4fc22;
+}
+.presentation-modern-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(120deg,#43e97b 0%,#2563eb 100%);
+  color: #fff;
+  border-radius: 50%;
+  width: 74px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  box-shadow: 0 6px 24px rgba(67,233,123,0.18);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background 0.18s, transform 0.18s;
+  z-index: 5;
+  opacity: 0.93;
+}
+.presentation-modern-play i {
+  font-size: 2.3rem;
+  margin-left: 0.13em;
+}
+.presentation-modern-card:hover .presentation-modern-play {
+  background: linear-gradient(120deg,#2563eb 0%,#43e97b 100%);
+  transform: translate(-50%, -50%) scale(1.13);
+  opacity: 1;
+}
+.presentation-modern-card:hover .presentation-modern-play {
+  background: linear-gradient(120deg,#43e97b 0%,#2563eb 100%);
+  transform: translate(-50%, -50%) scale(1.11);
+}
+.presentation-modern-content {
+  padding: 1.5rem 1.5rem 0.7rem 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+.presentation-modern-content h3 {
+  font-size: 1.38rem;
+  font-weight: 900;
+  margin-bottom: 0.7rem;
+  color: #2563eb;
+  letter-spacing: 0.7px;
+  text-shadow: 0 2px 8px #b6c6f933;
+}
+.presentation-modern-content p {
+  color: #64748b;
+  font-size: 1.07rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+.presentation-modern-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2.1rem;
+  font-size: 1.11rem;
+  color: #8a56ac;
+  margin-bottom: 1.55rem;
+  font-weight: 600;
+  align-items: center;
+}
+.presentation-modern-meta i {
+  font-size: 1.34rem;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+}
+.presentation-modern-btn {
+  background: linear-gradient(120deg,#2563eb 0%,#43e97b 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.1rem;
+  padding: 0.95rem 2.1rem;
+  font-weight: 800;
+  font-size: 1.13rem;
+  margin-top: 1.1rem;
+  box-shadow: 0 4px 18px rgba(67,233,123,0.15);
+  transition: background 0.22s, box-shadow 0.22s, transform 0.18s;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+.presentation-modern-btn:hover {
+  background: linear-gradient(120deg,#43e97b 0%,#2563eb 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+/* Modal Styles */
+.presentation-modern-modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(30,60,114,0.18);
+  backdrop-filter: blur(2px);
+  align-items: center;
+  justify-content: center;
+  transition: background 0.22s;
+}
+.presentation-modern-modal-content {
+  background: #fff;
+  border-radius: 1.3rem;
+  box-shadow: 0 12px 40px rgba(30,60,114,0.19);
+  padding: 2.2rem 2.7rem 2.2rem 2.7rem;
+  max-width: 540px;
+  width: 96vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  text-align: center;
+  animation: modalPop 0.34s cubic-bezier(.4,2,.6,1);
+}
+@keyframes modalPop {
+  0% { transform: scale(0.85) translateY(30px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+.presentation-modern-modal-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.3rem;
+  font-size: 2.2rem;
+  color: #64748b;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 2;
+  transition: color 0.13s;
+}
+.presentation-modern-modal-close:hover {
+  color: #2563eb;
+}
+.presentation-modern-modal iframe,
+.presentation-modern-modal video {
+  border-radius: 1rem;
+  background: #f1f5f9;
+  margin-top: 1.1rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 12px #a5b4fc22;
+}
+@media (max-width: 1100px) {
+  .presentations-modern-grid { flex-direction: column; gap: 2.2rem; align-items: center; }
+  .presentation-modern-card { width: 94vw; max-width: 400px; }
+  .presentation-modern-modal-content { padding: 1.1rem 0.6rem; }
+}
+@media (max-width: 600px) {
+  .presentation-modern-modal-content { max-width: 99vw; padding: 0.7rem 0.1rem; }
+  .presentation-modern-card { width: 99vw; max-width: 99vw; }
+}
