@@ -1106,7 +1106,7 @@ html {
 /* Research Objectives Timeline Styles */
 .objectives-timeline {
   position: relative;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 2.5rem auto 2.5rem auto;
   padding: 1rem 0;
 }
