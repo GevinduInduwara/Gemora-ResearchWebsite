@@ -551,6 +551,140 @@ html {
 }
 
 /* ===========================================
+   Modern Research Sections
+   =========================================== */
+
+/* Section Container Modern Look */
+.main-sections {
+    background: rgba(255,255,255,0.55);
+    box-shadow: 0 8px 32px rgba(30,60,114,0.07);
+    border-radius: 22px;
+    margin-bottom: 2.5rem;
+    padding: 2.5rem 1.5rem 2.2rem 1.5rem;
+    position: relative;
+    animation: fadeInSection 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Section Headings */
+.section-headings {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2a5298;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(74,144,226,0.08);
+}
+
+/* Sub-section Card Style */
+.sub-section, .research-gap {
+    background: rgba(255,255,255,0.92);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(74,144,226,0.07);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Section Description Modern Look */
+.section-description {
+    font-size: 1.07rem;
+    color: #3a4256;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* List and Ordered List Modern */
+.main-sections ul, .main-sections ol {
+    background: rgba(74,144,226,0.04);
+    border-radius: 10px;
+    padding: 1rem 1.5rem 1rem 2.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.04rem;
+    color: #2a2e39;
+    box-shadow: 0 2px 10px rgba(44,62,80,0.06);
+}
+.main-sections li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.15rem;
+}
+
+@keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================================
+   Technologies Section
+   =========================================== */
+
+#technologies {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.technology-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.technology-card {
+    background: rgba(255,255,255,0.82);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(74,144,226,0.10);
+    padding: 2rem 1.7rem 1.2rem 1.7rem;
+    min-width: 180px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.25s, transform 0.22s, background 0.22s;
+    cursor: pointer;
+    animation: fadeInUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.technology-card:hover {
+    box-shadow: 0 12px 36px rgba(44,62,80,0.13);
+    transform: translateY(-6px) scale(1.045);
+    background: rgba(74,144,226,0.10);
+}
+.technology-icon {
+    font-size: 2.8rem;
+    color: #2563eb;
+    margin-bottom: 1.1rem;
+    transition: color 0.22s, text-shadow 0.22s;
+    text-shadow: 0 2px 12px rgba(74,144,226,0.13);
+}
+
+.technology-card:hover .technology-icon {
+    color: #2a5298;
+    text-shadow: 0 4px 18px rgba(74,144,226,0.24);
+}
+.technology-title {
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: #222b45;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .technology-grid {
+        flex-direction: column;
+        gap: 1.1rem;
+        align-items: center;
+    }
+    .technology-card {
+        width: 90%;
+        min-width: unset;
+        min-height: 120px;
+        padding: 1.2rem 0.7rem;
+    }
+}
+
+/* ===========================================
    Presentations Section
    =========================================== */
 
@@ -614,16 +748,6 @@ html {
     .about-card .card-body { padding: 1rem 0.5rem 0.2rem 0.5rem; }
 }
 
-    background: rgba(255,255,255,0.18);
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(30,60,114,0.10);
-    border: 1.5px solid rgba(74,144,226,0.10);
-    backdrop-filter: blur(8px);
-    transition: box-shadow 0.35s, transform 0.35s, background 0.35s;
-    overflow: hidden;
-    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-    position: relative;
-}
 .about-card:hover {
     box-shadow: 0 16px 48px rgba(30,60,114,0.16);
     transform: translateY(-8px) scale(1.025);

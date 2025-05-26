@@ -139,10 +139,39 @@ function createMilestoneElement(milestone, index) {
         toggleIcon.classList.toggle('fa-chevron-up', isActive);
         // Animate progress bar
         if (isActive) {
-            const bar = element.querySelector('.progress-bar');
-            setTimeout(() => {
-                bar.style.width = `${progressBarWidth}%`;
-            }, 150);
+           // Animate About Us cards (fade in)
+document.querySelectorAll('.about-card').forEach((card, i) => {
+    card.style.opacity = 0;
+    setTimeout(() => {
+        card.style.opacity = 1;
+        card.classList.add('animate__fadeInUp');
+    }, 200 + i * 120);
+});
+
+// Animate Technologies cards on scroll
+const techCards = document.querySelectorAll('.technology-card');
+techCards.forEach(card => {
+    card.style.opacity = 0;
+});
+if ('IntersectionObserver' in window) {
+    const techObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.classList.add('animate__fadeInUp');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    techCards.forEach(card => techObserver.observe(card));
+} else {
+    techCards.forEach((card, i) => {
+        setTimeout(() => {
+            card.style.opacity = 1;
+            card.classList.add('animate__fadeInUp');
+        }, 400 + i * 100);
+    });
+}
         } else {
             const bar = element.querySelector('.progress-bar');
             bar.style.width = `0%`;
