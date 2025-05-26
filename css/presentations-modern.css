@@ -1,4 +1,68 @@
 /* Modern, Clean Presentations Cards Section */
+
+/* Research Gap Section Modern Styles */
+#research-gap .container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+#research-gap .research-gap {
+  background: #fff !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 4px 24px 0 rgba(60,60,90,0.10), 0 1.5px 4px 0 rgba(60,60,90,0.05) !important;
+  padding: 2.5rem 2rem !important;
+  margin-bottom: 2rem !important;
+  opacity: 1 !important;
+  transform: none !important;
+  display: block !important;
+  color: #222 !important;
+}
+#research-gap .research-gap:not(.reveal) {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+#research-gap .research-gap.reveal {
+  opacity: 1;
+  transform: none;
+}
+#research-gap .research-gap:hover {
+  box-shadow: 0 8px 32px 0 rgba(60,60,90,0.18), 0 3px 8px 0 rgba(60,60,90,0.08);
+  transform: translateY(-6px) scale(1.01);
+}
+#research-gap .section-headings {
+  color: #5b3ede;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2rem;
+}
+#research-gap .research-gap h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2e2e3a;
+  margin-bottom: 1.5rem;
+}
+#research-gap .section-description {
+  font-size: 1.08rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+#research-gap .research-gap-names {
+  font-weight: 600;
+  color: #5b3ede;
+  font-size: 1.08rem;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 700px) {
+  #research-gap .research-gap {
+    padding: 1.2rem 0.7rem;
+  }
+  #research-gap .container {
+    padding: 1.2rem 0.3rem;
+  }
+}
+
 .presentations-modern-section {
   background: #eaf6f2;
   padding: 90px 0 60px 0;

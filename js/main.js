@@ -141,6 +141,22 @@ if (contactForm) {
     });
 }
 
+// Add your main JS here
+
+// Reveal Research Gap section on scroll
+function revealOnScroll() {
+  const researchGap = document.querySelector('#research-gap .research-gap');
+  if (!researchGap) return;
+  const rect = researchGap.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  if (rect.top <= windowHeight - 80) {
+    researchGap.classList.add('reveal');
+    window.removeEventListener('scroll', revealOnScroll);
+  }
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('DOMContentLoaded', revealOnScroll);
+
 // Add animation to section headings
 const sectionHeadings = document.querySelectorAll('.section-headings');
 const observerOptions = {
