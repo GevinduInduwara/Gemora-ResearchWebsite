@@ -1040,6 +1040,12 @@ html {
   color: #6c757d;
   margin-bottom: 2.5rem;
   /* max-width: 700px; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.research-gap-names {
+  font-weight: bold;
 }
 
 /* Hero Section Styles */
