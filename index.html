@@ -295,16 +295,12 @@
                   function createCard(person, isSupervisor = false) {
                     return `
                       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card h-100 shadow-sm ${isSupervisor ? 'border-primary' : ''}">
-                          <img src="${person.img}" class="card-img-top mx-auto mt-3" alt="${person.name}" style="width:160px;height:160px;object-fit:cover;border-radius:12px;border:3px solid #fff;box-shadow:0 2px 12px rgba(30,60,114,0.11);background:#e9f7ef;">
-                          <div class="card-body text-center">
-                            <h5 class="card-title mb-1">${person.name}</h5>
-                            <p class="card-subtitle mb-2 text-muted">${person.role}</p>
-                            ${person.details ? person.details.map(d => `<div class='small text-secondary'>${d}</div>`).join('') : ''}
-                            <div class="mt-2">
-                              ${person.linkedin ? `<a href="${person.linkedin}" class="btn btn-sm btn-outline-primary mx-1" target="_blank"><i class="fab fa-linkedin"></i></a>` : ''}
-                              ${person.github ? `<a href="${person.github}" class="btn btn-sm btn-outline-dark mx-1" target="_blank"><i class="fab fa-github"></i></a>` : ''}
-                            </div>
+                        <div class="about-card wow animate__animated animate__fadeInUp">
+                          <img src="${person.img}" class="about-img" alt="${person.name}">
+                          <div class="card-body">
+                            <div class="about-name">${person.name}</div>
+                            <span class="about-role">${person.role}</span>
+                            ${person.details ? person.details.map(d => `<div class='about-details'>${d}</div>`).join('') : ''}
                           </div>
                         </div>
                       </div>

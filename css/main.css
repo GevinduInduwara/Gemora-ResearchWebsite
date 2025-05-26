@@ -553,6 +553,119 @@ html {
 /* ===========================================
    Presentations Section
    =========================================== */
+
+/* About Us Modern Card Styles */
+.about-card {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 10px 36px rgba(30,60,114,0.13);
+    border: none;
+    padding: 0 0 2.2rem 0;
+    transition: box-shadow 0.3s, transform 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 370px;
+}
+.about-card:hover {
+    box-shadow: 0 18px 56px rgba(30,60,114,0.18);
+    transform: translateY(-6px) scale(1.017);
+}
+.about-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 22px 22px 0 0;
+    margin-bottom: 0;
+    display: block;
+}
+.about-card .card-body {
+    padding: 1.2rem 1.5rem 0.2rem 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+.about-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222b45;
+    margin-bottom: 0.2rem;
+    margin-top: 0.5rem;
+}
+.about-role {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #2563eb;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.7rem;
+    text-transform: uppercase;
+    display: block;
+}
+.about-details {
+    color: #5e6e89;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
+}
+@media (max-width: 767px) {
+    .about-card { min-height: 320px; }
+    .about-img { height: 160px; }
+    .about-card .card-body { padding: 1rem 0.5rem 0.2rem 0.5rem; }
+}
+
+    background: rgba(255,255,255,0.18);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(30,60,114,0.10);
+    border: 1.5px solid rgba(74,144,226,0.10);
+    backdrop-filter: blur(8px);
+    transition: box-shadow 0.35s, transform 0.35s, background 0.35s;
+    overflow: hidden;
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+}
+.about-card:hover {
+    box-shadow: 0 16px 48px rgba(30,60,114,0.16);
+    transform: translateY(-8px) scale(1.025);
+    background: rgba(255,255,255,0.38);
+}
+.about-card .card-img-top {
+    border-radius: 50%;
+    border: 3px solid #4a90e2;
+    box-shadow: 0 4px 16px rgba(74,144,226,0.08);
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+.about-card:hover .card-img-top {
+    box-shadow: 0 8px 32px rgba(74,144,226,0.18);
+    border-color: #2a5298;
+}
+.about-card .btn-outline-primary, .about-card .btn-outline-dark {
+    border-radius: 50px;
+    padding: 0.4rem 1.2rem;
+    font-weight: 500;
+    transition: background 0.22s, color 0.22s, box-shadow 0.22s;
+    margin: 0 0.2rem;
+}
+.about-card .btn-outline-primary:hover {
+    background: linear-gradient(90deg, #4a90e2 0%, #2a5298 100%);
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(74,144,226,0.12);
+}
+.about-card .btn-outline-dark:hover {
+    background: #23272b;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .presentation-card {
     background: #ffffff;
     border-radius: 12px;
