@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./lib/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./lib/bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/milestones.css">
     <title>Gemora</title>
 </head>
 
@@ -38,30 +39,30 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" 
+                        <a class="nav-link dropdown-toggle" href="#research-problem" id="projectDropdown" role="button" 
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-project-diagram"></i>
                             <span>Project Scope</span>
                             <i class="fas fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="projectDropdown">
-                            <a class="dropdown-item" href="#project-scope">
+                            <a class="dropdown-item" href="#literature-survey">
                                 <i class="fas fa-book"></i> Literature Survey
                             </a>
-                            <a class="dropdown-item" href="#research_gap">
-                                <i class="fas fa-search-minus"></i> Research Gap
+                            <a class="dropdown-item" href="#research-gap">
+                                <i class="fas fa-search"></i> Research Gap
                             </a>
-                            <a class="dropdown-item" href="#research_problem">
+                            <a class="dropdown-item" href="#research-problem">
                                 <i class="fas fa-question-circle"></i> Research Problem & Solution
                             </a>
-                            <a class="dropdown-item" href="#research_objectives">
+                            <a class="dropdown-item" href="#research-objectives">
                                 <i class="fas fa-bullseye"></i> Research Objectives
                             </a>
                             <a class="dropdown-item" href="#methodology">
-                                <i class="fas fa-sitemap"></i> Methodology
+                                <i class="fas fa-project-diagram"></i> Methodology
                             </a>
-                            <a class="dropdown-item" href="#tech_used">
-                                <i class="fas fa-microchip"></i> Technologies
+                            <a class="dropdown-item" href="#technologies" data-toggle="collapse" data-target=".navbar-collapse.show">
+                                <i class="fas fa-cogs"></i> Technologies
                             </a>
                         </div>
                     </li>
@@ -107,14 +108,15 @@
     <header id="home" class="hero-section">
         <!-- Background Layers -->
         <div class="hero-bg">
+            <video class="hero-video-bg" src="./videos/5106444-hd_1920_1080_25fps.mp4" autoplay loop muted playsinline></video>
             <div class="bg-layer bg-layer-1"></div>
             <div class="bg-layer bg-layer-2"></div>
         </div>
-        <!-- Magnifying Glass -->
+        <!-- Magnifying Glass
         <div class="magnifying-glass" id="magnifyingGlass">
             <i class="fas fa-search"></i>
             <div class="magnifier"></div>
-        </div>
+        </div> -->
         <!-- Content -->
         <div class="container h-100">
             <div class="row h-100 align-items-center">
@@ -212,9 +214,25 @@
                 </div>
             </div>
         </section>
+    
+        <!-- Milestones -->
+        <section id="milestones" class="main-sections bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h5 class="section-headings">Our Journey</h5>
+                    <h2>Project Timeline</h2>
+                    <p class="section-description">Key milestones and achievements throughout our project development</p>
+                </div>
+                <div class="milestone-tree-container">
+                    <div class="milestone-tree">
+                        <!-- Milestone items will be dynamically inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- About Us -->
-    <section id="about" class="main-sections">
+        <section id="about" class="main-sections">
         <div class="container">
             <h5 class="section-headings">About Us</h5>
             <div class="sub-section">
@@ -295,7 +313,7 @@
                 </script>
                 
                 <!-- Technologies Section -->
-                <div class="sub-section mt-5">
+                <div id="technologies" class="sub-section mt-5">
                     <h2>Technologies We Use</h2>
                     <div class="technologies-container">
                         <div class="tech-item">
@@ -668,5 +686,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/milestones.js"></script>
 </body>
 </html>

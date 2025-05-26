@@ -1,0 +1,181 @@
+/* Milestone Tree Styles */
+.milestone-tree-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.milestone-tree {
+    position: relative;
+    padding-left: 30px;
+}
+
+.milestone-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.milestone-item:last-child {
+    margin-bottom: 0;
+}
+
+.milestone-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 30px;
+    width: 30px;
+    height: 100%;
+    border-left: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    border-bottom-left-radius: 8px;
+}
+
+.milestone-item:first-child::before {
+    top: 30px;
+    height: calc(100% - 30px);
+}
+
+.milestone-item:last-child::before {
+    height: 30px;
+}
+
+.milestone-item:only-child::before {
+    display: none;
+}
+
+.milestone-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.milestone-item.active .milestone-header {
+    background: #f0f7ff;
+}
+
+.milestone-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #4a90e2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.milestone-item.completed .milestone-icon {
+    background: #28a745;
+}
+
+.milestone-title {
+    flex-grow: 1;
+}
+
+.milestone-title h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.milestone-date {
+    display: block;
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 3px;
+}
+
+.milestone-toggle {
+    font-size: 0.9rem;
+    color: #6c757d;
+    transition: transform 0.3s ease;
+}
+
+.milestone-item.active .milestone-toggle {
+    transform: rotate(180deg);
+}
+
+.milestone-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: white;
+}
+
+.milestone-item.active .milestone-content {
+    max-height: 500px; /* Adjust based on content */
+}
+
+.milestone-details {
+    padding: 0 20px 20px 75px;
+}
+
+.milestone-marks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.progress {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.6s ease;
+}
+
+.milestone-item.completed .progress-bar {
+    background-color: #28a745;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .milestone-tree {
+        padding-left: 20px;
+    }
+    
+    .milestone-item::before {
+        left: -20px;
+        width: 20px;
+    }
+    
+    .milestone-header {
+        padding: 15px;
+    }
+    
+    .milestone-details {
+        padding-left: 65px;
+    }
+}
+
+/* Animation for progress bars */
+@keyframes progressAnimation {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.milestone-item.active .progress-bar {
+    animation: progressAnimation 1s ease-out forwards;
+}
