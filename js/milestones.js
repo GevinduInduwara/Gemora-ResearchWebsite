@@ -7,6 +7,7 @@ const milestonesData = [
         description: 'A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.',
         marks: 6,
         progress: 6,
+        customPercent: 6,
         completed: true
     },
     {
@@ -16,6 +17,7 @@ const milestonesData = [
         description: 'Reviews the 50% completion status of the project. This reveals any gaps or inconsistencies in the design/requirements.',
         marks: 6,
         progress: 6,
+        customPercent: 6,
         completed: true
     },
     {
@@ -23,9 +25,10 @@ const milestonesData = [
         title: 'Research Paper',
         date: 'March 2025',
         description: 'Describes what you contribute to existing knowledge, giving due recognition to all work that you referred to in making new knowledge.',
-        marks: 10,
-        progress: 10,
-        completed: true
+        marks: 10,  // Marks allocated: 10
+        progress: 10,  // Shows 10% in progress bar
+        customPercent: 10,
+        completed: false
     },
     {
         id: 'progress2',
@@ -34,6 +37,7 @@ const milestonesData = [
         description: 'Reviews the 90% completion status demonstration of the project. Includes a Poster presentation which describes the project as a whole.',
         marks: 18,
         progress: 18,
+        customPercent: 18,
         completed: true
     },
     {
@@ -43,15 +47,17 @@ const milestonesData = [
         description: 'The Website helps to promote our research project and reveals all details related to the project.',
         marks: 2,
         progress: 2,
-        completed: false
+        customPercent: 2,
+        completed: true
     },
     {
         id: 'logbook',
         title: 'Logbook',
         date: 'June 2025',
         description: 'Status of the project is validated through the Logbook. This also includes Status documents 1 & 2.',
-        marks: 3,
-        progress: 3,
+        marks: 35,
+        progress: 20,
+        customPercent: 3,
         completed: false
     },
     {
@@ -61,6 +67,7 @@ const milestonesData = [
         description: 'Evaluates the completed project done throughout the year. Includes marks for Individual & group reports and also Final report.',
         marks: 19,
         progress: 19,
+        customPercent: 19,
         completed: false
     },
     {
@@ -70,6 +77,7 @@ const milestonesData = [
         description: 'Viva is held individually to assess each member\'s contribution to the project.',
         marks: 20,
         progress: 20,
+        customPercent: 10,
         completed: false
     }
 ];
@@ -174,7 +182,7 @@ if ('IntersectionObserver' in window) {
 }
         } else {
             const bar = element.querySelector('.progress-bar');
-            bar.style.width = `0%`;
+            bar.style.width = `${milestone.progress}%`;
         }
     });
     // Keyboard accessibility
@@ -224,12 +232,17 @@ document.addEventListener('DOMContentLoaded', () => {
         desc.textContent = milestone.description;
         copy.appendChild(desc);
 
-        // Progress bar
+        // Progress bar with custom percentage support
         const progress = document.createElement('div');
         progress.className = 'progress';
         const progressBar = document.createElement('div');
         progressBar.className = 'progress-bar';
-        const percent = Math.round((milestone.progress / milestone.marks) * 100);
+        
+        // Use customPercent if provided, otherwise calculate based on progress/marks
+        const percent = milestone.customPercent !== undefined ? 
+                       milestone.customPercent : 
+                       Math.round((milestone.progress / milestone.marks) * 100);
+        
         progressBar.style.width = percent + '%';
         progressBar.textContent = percent + '%';
         progress.appendChild(progressBar);
